@@ -1,0 +1,798 @@
+{
+    "console": [
+        {
+            "type": "message",
+            "value": "Loaded the built-in macros."
+        }
+    ],
+    "result": {
+        "passages": [
+            {
+                "Name": "Introduction",
+                "Pid": "1",
+                "Tags": "number-1 OutsideEntrance",
+                "Tokens": [
+                    {
+                        "text": "You are Patrick Kennedy. You are 89 years old. You have worked as a servant for most of your life. When you weren't a servant, you worked odd jobs to survive. Your children are dead from disease. You were hoping they would take care of you in your old age. But now you have no family to help you, and you are too old to work. You apply to the parish for a weekly pension, but they deny you. Instead, they give you five shillings for present relief. ",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"You run out of money and have to apply for relief again\",\"You run out of money and have to apply for relief again\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"You run out of money and have to apply for relief again\",\"You run out of money and have to apply for relief again\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "You run out of money and have to apply for relief again",
+                                "text": "\"You run out of money and have to apply for relief again\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "You run out of money and have to apply for relief again",
+                                "text": "\"You run out of money and have to apply for relief again\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "You run out of money and have to apply for relief again",
+                "Pid": "2",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "The five shillings the committee gave you ran out. You don't want to starve, so you apply for relief again. The committee orders you into the workhouse.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Go into the workhouse\",\"Go into the workhouse\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Go into the workhouse\",\"Go into the workhouse\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Go into the workhouse",
+                                "text": "\"Go into the workhouse\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Go into the workhouse",
+                                "text": "\"Go into the workhouse\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Choose not to go into the workhouse\",\"Choose not to go into the workhouse\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Choose not to go into the workhouse\",\"Choose not to go into the workhouse\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Choose not to go into the workhouse",
+                                "text": "\"Choose not to go into the workhouse\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Choose not to go into the workhouse",
+                                "text": "\"Choose not to go into the workhouse\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "Go into the workhouse",
+                "Pid": "3",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "You meet the master and matron of the house. You and your wife are seperated. She goes with the matron. You go with the master. You are given a bucket of water and told to wash. After you wash, your old clothes are taken from you, and you are given new, scratchy wool clothes instead. All your personal belongings are taken away. You don't know where the master puts them. You are ordered to report to work immediately.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Follow the order and go to work\",\"Follow the order and go to work\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Follow the order and go to work\",\"Follow the order and go to work\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Follow the order and go to work",
+                                "text": "\"Follow the order and go to work\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Follow the order and go to work",
+                                "text": "\"Follow the order and go to work\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Realize that entering the workhouse was a mistake and try to leave\",\"Realize that entering the workhouse was a mistake and try to leave\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Realize that entering the workhouse was a mistake and try to leave\",\"Realize that entering the workhouse was a mistake and try to leave\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Realize that entering the workhouse was a mistake and try to leave",
+                                "text": "\"Realize that entering the workhouse was a mistake and try to leave\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Realize that entering the workhouse was a mistake and try to leave",
+                                "text": "\"Realize that entering the workhouse was a mistake and try to leave\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "Choose not to go into the workhouse",
+                "Pid": "4",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "Life is hard. You are unable to find work, and you and your wife are starving. You choose to beg on the streets, and you are unfortunately picked up by the police. You are taken to the parish and put into the workhouse.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Go into the workhouse\",\"Go into the workhouse\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Go into the workhouse\",\"Go into the workhouse\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Go into the workhouse",
+                                "text": "\"Go into the workhouse\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Go into the workhouse",
+                                "text": "\"Go into the workhouse\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": " ",
+                        "type": "whitespace"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    }
+                ]
+            },
+            {
+                "Name": "Follow the order and go to work",
+                "Pid": "5",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "Go to work. You are ordered to sweep the floor while people are spinning. The work is tedious. You are relieved when the workhouse master rings a bell and announces that lunch will be served.  ",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Go to the dining room for lunch\",\"Go to the dining room for lunch\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Go to the dining room for lunch\",\"Go to the dining room for lunch\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Go to the dining room for lunch",
+                                "text": "\"Go to the dining room for lunch\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Go to the dining room for lunch",
+                                "text": "\"Go to the dining room for lunch\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "Realize that entering the workhouse was a mistake and try to leave",
+                "Pid": "6",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "You try to walk out the front door. The master of the workhouse stops you and gently leads you back to your room and tells you to lie down.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Go to the dining room for lunch\",\"Go to the dining room for lunch\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Go to the dining room for lunch\",\"Go to the dining room for lunch\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Go to the dining room for lunch",
+                                "text": "\"Go to the dining room for lunch\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Go to the dining room for lunch",
+                                "text": "\"Go to the dining room for lunch\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": " ",
+                        "type": "whitespace"
+                    }
+                ]
+            },
+            {
+                "Name": "Eat before the prayer is finished",
+                "Pid": "7",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "Your hunger overcomes you, and you choose to eat before the prayer ends. Drats! The workhouse master has caught you! You are reprimanded by recieving half rations for dinner.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Go to the family room\",\"Go to the family room\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Go to the family room\",\"Go to the family room\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Go to the family room",
+                                "text": "\"Go to the family room\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Go to the family room",
+                                "text": "\"Go to the family room\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "Wait until the prayer is finished to start eating",
+                "Pid": "8",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "You are able to wait till the prayer ends and you enjoy your entire meal. Afterwards, you are tired and go to lay down in the family room.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Go to the family room\",\"Go to the family room\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Go to the family room\",\"Go to the family room\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Go to the family room",
+                                "text": "\"Go to the family room\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Go to the family room",
+                                "text": "\"Go to the family room\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": " ",
+                        "type": "whitespace"
+                    }
+                ]
+            },
+            {
+                "Name": "Go to the dining room for lunch",
+                "Pid": "9",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "When you arrive in the dining room for lunch, you are served a boiled onion and bread. Prior to eating, the workhouse master leads everyone with a prayer, however, the prayer is long and you are very hungry.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Eat before the prayer is finished\",\"Eat before the prayer is finished\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Eat before the prayer is finished\",\"Eat before the prayer is finished\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Eat before the prayer is finished",
+                                "text": "\"Eat before the prayer is finished\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Eat before the prayer is finished",
+                                "text": "\"Eat before the prayer is finished\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Wait until the prayer is finished to start eating\",\"Wait until the prayer is finished to start eating\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Wait until the prayer is finished to start eating\",\"Wait until the prayer is finished to start eating\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Wait until the prayer is finished to start eating",
+                                "text": "\"Wait until the prayer is finished to start eating\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Wait until the prayer is finished to start eating",
+                                "text": "\"Wait until the prayer is finished to start eating\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    }
+                ]
+            },
+            {
+                "Name": "Go to the family room",
+                "Pid": "10",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "You try to take a nap, but you can hear the spinning wheels in the adjacent rooms. You try to sneak outside for some fresh air. The workhouse master catches you again. He brings you back inside.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Lie down again\",\"Lie down again\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Lie down again\",\"Lie down again\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Lie down again",
+                                "text": "\"Lie down again\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Lie down again",
+                                "text": "\"Lie down again\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Try to escape through a hole in the wall\",\"Try to escape through a hole in the wall\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Try to escape through a hole in the wall\",\"Try to escape through a hole in the wall\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Try to escape through a hole in the wall",
+                                "text": "\"Try to escape through a hole in the wall\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Try to escape through a hole in the wall",
+                                "text": "\"Try to escape through a hole in the wall\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    }
+                ]
+            },
+            {
+                "Name": "Lie down again",
+                "Pid": "11",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "The bell rings for dinner. You wake up and head back to the dining room to eat once more. ",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Go to the dining room\",\"Go to the dining room\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Go to the dining room\",\"Go to the dining room\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Go to the dining room",
+                                "text": "\"Go to the dining room\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Go to the dining room",
+                                "text": "\"Go to the dining room\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "Try to escape through a hole in the wall",
+                "Pid": "12",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "Unfortunately, 89 year old men are not agile nor flexible enough to escape through this hole. Your workhouse master catches you redhanded in the act. He confines you to your room.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Go to Sleep\",\"Go to Sleep\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Go to Sleep\",\"Go to Sleep\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Go to Sleep",
+                                "text": "\"Go to Sleep\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Go to Sleep",
+                                "text": "\"Go to Sleep\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "Go to the dining room",
+                "Pid": "13",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "For dinner you are served the scrumptious meal of suet pudding, which is made of disgusting materials. Delicious. After dinner, you are ordered back to your room and are told to prepare for bed.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Return to the family room\",\"Return to the family room\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Return to the family room\",\"Return to the family room\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Return to the family room",
+                                "text": "\"Return to the family room\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Return to the family room",
+                                "text": "\"Return to the family room\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "Go to Sleep",
+                "Pid": "14",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "It's been a long day, and you are tired. You can't believe you survived your first day in the workhouse as it has been a long ordeal. You close your eyes and hope tomorrow will be better. ",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "Name": "Return to the family room",
+                "Pid": "15",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "You see your lovely wife, who has been working all day and is a tad bit grumpy. Anyways, it is nice to see her again, and you talk about your days. The workhouse master yells, \"lights out\" and you and your wife go to bed.",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"Go to Sleep\",\"Go to Sleep\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"Go to Sleep\",\"Go to Sleep\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "Go to Sleep",
+                                "text": "\"Go to Sleep\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "Go to Sleep",
+                                "text": "\"Go to Sleep\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "text": " ",
+                        "type": "whitespace"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    }
+                ]
+            }
+        ],
+        "startPid": "1"
+    }
+}
