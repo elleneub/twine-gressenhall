@@ -1,11 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 public class gameManager : MonoBehaviour {
 
 	public StoryPoint currentStoryPoint;
 	public Text gameText;
+	public Cradle.Story importedStory;
+	Dictionary<string, Cradle.StoryLink> decisions;
+
+	private Regex rxChoicePuller;
+	private Regex rxLinkTextPuller;
+
+
 		
 	/*
 	 * For the "room" type choice point you can use these rooms:
@@ -15,86 +25,116 @@ public class gameManager : MonoBehaviour {
 	 * keypress-y and keypress-n
 	 * 
 	 */
-
 	// Use this for initialization
 	void Start () {
+
+		//Init variables
+		decisions = new Dictionary<string, Cradle.StoryLink>();
+		rxChoicePuller = new Regex("(?<=[(]{2}).*(?=[)]{2}$)");
+		rxLinkTextPuller = new Regex(".*(?=[(]{2})");
+
+
 		Debug.Log ("Just started up gameManager");
 
-		StoryPoint zeroPoint = new StoryPoint ("Do you want to go to the workhouse? (Press y for yes, n for no.)", "stationary");
+		importedStory.Begin ();
+		readyCurrentPassage ();
+	}
 
-		StoryPoint firstPointA = new StoryPoint ("No? To bad. You are outside of a workhouse. Walk up to the workhouse entrance.", "room");
-		StoryPoint firstPointB = new StoryPoint ("Great, cause you don't have a choice. You are outside of a workhouse. Walk up to the workhouse entrance.", "room");
+	void displayCurrentPassage () {
+		string displayText = "";
 
+		displayText += importedStory.CurrentPassageName + "\n";
 
-		zeroPoint.addChoice (firstPointA, "keypress-n");
-		zeroPoint.addChoice (firstPointB, "keypress-y");
+		foreach (Cradle.StoryText text in importedStory.GetCurrentText ())
+			displayText += text.Text + "\n\n";
 
-		StoryPoint secondPoint = new StoryPoint ("You stand in front of the workhouse looking at it's imposing entrance." +
-			"Go ahead on inside.", "room");
-
-		firstPointA.addChoice (secondPoint, "OutsideFront");
-		firstPointB.addChoice (secondPoint, "OutsideFront");
-
-		StoryPoint thirdPoint = new StoryPoint ("Welcome to the workhouse. You aren't really sure you want to be here. You think you might be able to leave if you " +
-			"just go back out the entrance, but the workhouse master is asking you to walk up the stairs on the right.", "room");
-
-		secondPoint.addChoice (thirdPoint, "MainEntrance");
-
-		StoryPoint fourthPoint = new StoryPoint ("You try to run away but that just isn't going to happen. There is no where to go..." +
-			" Go back in the workhouse and up the stairs to the right.", "room");
-
-		StoryPoint fifthPoint = new StoryPoint ("Your life in the workhouse begins today.", "none");
-
-		thirdPoint.addChoice (fourthPoint, "OutsideFront");
-		thirdPoint.addChoice (fifthPoint, "TopOfRightStairs");
-
-		fourthPoint.addChoice (fifthPoint, "TopOfRightStairs");
-
-
-		/* Initialize */
-		currentStoryPoint = zeroPoint;
-		gameText.text = currentStoryPoint.text;
-	} 
-	
-	// Update is called once per frame
-	void Update () {
-		
-		print (currentStoryPoint.decisionType);
-		if (currentStoryPoint.decisionType == "stationary") {
-			StoryPoint nextStoryPoint = null;
-			if (Input.GetKeyDown (KeyCode.Y)) {
-				print ("In game manager y pressed");
-				nextStoryPoint = currentStoryPoint.checkDecisions ("keypress-y");
-			} else if (Input.GetKeyDown (KeyCode.N)) {
-				print ("In game manager n pressed");
-				nextStoryPoint = currentStoryPoint.checkDecisions ("keypress-n");
-			}
-
-			if (nextStoryPoint != null) {
-				currentStoryPoint = nextStoryPoint;
-				print (nextStoryPoint.text);
-				gameText.text = currentStoryPoint.text;
-			}
+		foreach (Cradle.StoryLink link in importedStory.GetCurrentLinks()) {
+			displayText += pullLinkText(link) + "\n";
 		}
 
+		gameText.text = displayText;
+	}
+
+	// Gets the current passage all set up (displays on screen and listens for events)
+	void readyCurrentPassage() {
+		displayCurrentPassage ();
+		decisions.Clear ();
+		foreach (Cradle.StoryLink link in importedStory.GetCurrentLinks()) {
+			string choice = pullChoiceFromLink(link);
+			decisions.Add (choice, link);
+		}
+	}
+
+	void printCurrentPassage() {
+		print ("Current passage name: " + importedStory.CurrentPassageName);
+
+		foreach (Cradle.StoryText text in importedStory.GetCurrentText ())
+			print (text.Text);
+
+		foreach (Cradle.StoryLink link in importedStory.GetCurrentLinks()) {
+			print (pullLinkText(link));
+			print (pullChoiceFromLink (link));
+		}
+	}
+
+	string pullLinkText(Cradle.StoryLink link) {
+		Match m = rxLinkTextPuller.Match(link.Text);
+		if (m.Success)
+			return m.Value;
+		return link.Text + " - No valid decision recognized";
+	}
+
+	string pullChoiceFromLink(Cradle.StoryLink link) {
+		Match m = rxChoicePuller.Match(link.Text);
+		if (m.Success)
+			return m.Value;
+		return "";
+	}
+
+	// Update is called once per frame
+	void Update () {
+		if (Input.GetKeyDown (KeyCode.Y)) {
+			print ("In game manager y pressed");
+			try
+			{
+				Cradle.StoryLink next = decisions["keypress-y"];
+				importedStory.DoLink(next);
+				readyCurrentPassage();
+			}
+			catch (KeyNotFoundException)
+			{
+				print ("Key not in decision dictionary");
+			}
+		} else if (Input.GetKeyDown (KeyCode.N)) {
+			print ("In game manager n pressed");
+			try
+			{
+				Cradle.StoryLink next = decisions["keypress-n"];
+				importedStory.DoLink(next);
+				readyCurrentPassage();
+			}
+			catch (KeyNotFoundException)
+			{
+				print ("Key not in decision dictionary");
+			}
+		}
 	}
 
 	public void recieveCollisions(string name) {
-		
-		print ("In game manager recieved collision from: " + name);
-		if (currentStoryPoint.decisionType == "room") {
-			StoryPoint nextStoryPoint = currentStoryPoint.checkDecisions (name);
-			if (nextStoryPoint != null) {
-				currentStoryPoint = nextStoryPoint;
-				print (nextStoryPoint.text);
-				gameText.text = currentStoryPoint.text;
-			}
-
+		try
+		{
+			Cradle.StoryLink next = decisions[name];
+			importedStory.DoLink(next);
+			readyCurrentPassage();
+		}
+		catch (KeyNotFoundException)
+		{
+			print (name + " not in decision dictionary");
 		}
 	}
 
 	void updateDecision(StoryPoint nextStoryPoint) {
 		currentStoryPoint = nextStoryPoint;
-		print (currentStoryPoint.text);
+		//print (currentStoryPoint.text);
 	}
 }

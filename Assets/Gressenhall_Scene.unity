@@ -430,6 +430,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11477914, guid: 19c2ea68613c443f5a5cb77eb0af61c3, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19c2ea68613c443f5a5cb77eb0af61c3, type: 2}
   m_IsPrefabParent: 0
@@ -549,6 +553,49 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0a94f9390e5d74c08b9671f93e49ea52, type: 3}
   m_PrefabInternal: {fileID: 1867496108}
+--- !u!1 &432202721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 432202723}
+  - 114: {fileID: 432202722}
+  m_Layer: 0
+  m_Name: GressenhallTwine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &432202722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432202721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f763a647eb3444591dce9bc3ccc408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AutoPlay: 1
+  StartPassage: Welcome
+  AdditionalCues: []
+  DebugMode: 0
+--- !u!4 &432202723
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432202721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
 --- !u!1 &679753646
 GameObject:
   m_ObjectHideFlags: 0
@@ -8709,6 +8756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameText: {fileID: 1131870185}
+  importedStory: {fileID: 432202722}
 --- !u!1 &2103134975
 GameObject:
   m_ObjectHideFlags: 0

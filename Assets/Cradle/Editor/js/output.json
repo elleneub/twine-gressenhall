@@ -8,7 +8,7 @@
     "result": {
         "passages": [
             {
-                "Name": "Introduction",
+                "Name": "Welcome",
                 "Pid": "1",
                 "Tags": "number-1 OutsideEntrance",
                 "Tokens": [
@@ -25,17 +25,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"You run out of money and have to apply for relief again\",\"You run out of money and have to apply for relief again\"",
+                        "innerText": "link-goto:\"You run out of money and have to apply for relief again. Walk to the main entrance. ((OutsideFront))\",\"You run out of money and have to apply for relief again\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"You run out of money and have to apply for relief again\",\"You run out of money and have to apply for relief again\")",
+                        "text": "(link-goto:\"You run out of money and have to apply for relief again. Walk to the main entrance. ((OutsideFront))\",\"You run out of money and have to apply for relief again\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "You run out of money and have to apply for relief again",
-                                "text": "\"You run out of money and have to apply for relief again\"",
+                                "innerText": "You run out of money and have to apply for relief again. Walk to the main entrance. ((OutsideFront))",
+                                "text": "\"You run out of money and have to apply for relief again. Walk to the main entrance. ((OutsideFront))\"",
                                 "type": "string"
                             },
                             {
@@ -70,17 +70,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Go into the workhouse\",\"Go into the workhouse\"",
+                        "innerText": "link-goto:\"Walk into the workhouse, or((MainEntrance))\",\"Go into the workhouse\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Go into the workhouse\",\"Go into the workhouse\")",
+                        "text": "(link-goto:\"Walk into the workhouse, or((MainEntrance))\",\"Go into the workhouse\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Go into the workhouse",
-                                "text": "\"Go into the workhouse\"",
+                                "innerText": "Walk into the workhouse, or((MainEntrance))",
+                                "text": "\"Walk into the workhouse, or((MainEntrance))\"",
                                 "type": "string"
                             },
                             {
@@ -100,17 +100,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Choose not to go into the workhouse\",\"Choose not to go into the workhouse\"",
+                        "innerText": "link-goto:\"Choose not to go into the workhouse by pressing n.((keypress-n))\",\"Choose not to go into the workhouse\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Choose not to go into the workhouse\",\"Choose not to go into the workhouse\")",
+                        "text": "(link-goto:\"Choose not to go into the workhouse by pressing n.((keypress-n))\",\"Choose not to go into the workhouse\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Choose not to go into the workhouse",
-                                "text": "\"Choose not to go into the workhouse\"",
+                                "innerText": "Choose not to go into the workhouse by pressing n.((keypress-n))",
+                                "text": "\"Choose not to go into the workhouse by pressing n.((keypress-n))\"",
                                 "type": "string"
                             },
                             {
@@ -145,17 +145,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Follow the order and go to work\",\"Follow the order and go to work\"",
+                        "innerText": "link-goto:\"Follow the order and go to work (in the hallway)((Hallway))\",\"Follow the order and go to work\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Follow the order and go to work\",\"Follow the order and go to work\")",
+                        "text": "(link-goto:\"Follow the order and go to work (in the hallway)((Hallway))\",\"Follow the order and go to work\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Follow the order and go to work",
-                                "text": "\"Follow the order and go to work\"",
+                                "innerText": "Follow the order and go to work (in the hallway)((Hallway))",
+                                "text": "\"Follow the order and go to work (in the hallway)((Hallway))\"",
                                 "type": "string"
                             },
                             {
@@ -175,17 +175,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Realize that entering the workhouse was a mistake and try to leave\",\"Realize that entering the workhouse was a mistake and try to leave\"",
+                        "innerText": "link-goto:\"Realize that entering the workhouse was a mistake and try to leave((OutsideFront))\",\"Realize that entering the workhouse was a mistake and try to leave\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Realize that entering the workhouse was a mistake and try to leave\",\"Realize that entering the workhouse was a mistake and try to leave\")",
+                        "text": "(link-goto:\"Realize that entering the workhouse was a mistake and try to leave((OutsideFront))\",\"Realize that entering the workhouse was a mistake and try to leave\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Realize that entering the workhouse was a mistake and try to leave",
-                                "text": "\"Realize that entering the workhouse was a mistake and try to leave\"",
+                                "innerText": "Realize that entering the workhouse was a mistake and try to leave((OutsideFront))",
+                                "text": "\"Realize that entering the workhouse was a mistake and try to leave((OutsideFront))\"",
                                 "type": "string"
                             },
                             {
@@ -273,17 +273,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Go to the dining room for lunch\",\"Go to the dining room for lunch\"",
+                        "innerText": "link-goto:\"Go to the dining room for lunch((MainEntrance))\",\"Go to the dining room for lunch\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Go to the dining room for lunch\",\"Go to the dining room for lunch\")",
+                        "text": "(link-goto:\"Go to the dining room for lunch((MainEntrance))\",\"Go to the dining room for lunch\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Go to the dining room for lunch",
-                                "text": "\"Go to the dining room for lunch\"",
+                                "innerText": "Go to the dining room for lunch((MainEntrance))",
+                                "text": "\"Go to the dining room for lunch((MainEntrance))\"",
                                 "type": "string"
                             },
                             {
@@ -314,17 +314,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Go to the dining room for lunch\",\"Go to the dining room for lunch\"",
+                        "innerText": "link-goto:\"Go to the dining room for lunch((MainEntrance))\",\"Go to the dining room for lunch\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Go to the dining room for lunch\",\"Go to the dining room for lunch\")",
+                        "text": "(link-goto:\"Go to the dining room for lunch((MainEntrance))\",\"Go to the dining room for lunch\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Go to the dining room for lunch",
-                                "text": "\"Go to the dining room for lunch\"",
+                                "innerText": "Go to the dining room for lunch((MainEntrance))",
+                                "text": "\"Go to the dining room for lunch((MainEntrance))\"",
                                 "type": "string"
                             },
                             {

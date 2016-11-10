@@ -11,7 +11,7 @@ public class Decision {
 	{
 		this.consequence = consequence;
 		this.condition = cond;
-		Debug.Log ("Making new decision with condition: " + cond);
+		//Debug.Log ("Making new decision with condition: " + cond);
 	}
 
 	// Use this for initialization

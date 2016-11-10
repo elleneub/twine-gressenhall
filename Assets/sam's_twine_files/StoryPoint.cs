@@ -24,7 +24,7 @@ public class StoryPoint {
 
 	// Use this for initialization
 	void initialize () {
-		Debug.Log ("Making new storypoint: " + text);
+		//Debug.Log ("Making new storypoint: " + text);
 		decisionList = new List<Decision> ();
 	}
 	
