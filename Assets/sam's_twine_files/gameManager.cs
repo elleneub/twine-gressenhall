@@ -10,10 +10,13 @@ public class gameManager : MonoBehaviour {
 	public StoryPoint currentStoryPoint;
 	public Text gameText;
 	public Cradle.Story importedStory;
+	public Image textBackground;
+	public Texture choicePointTexture;
 	Dictionary<string, Cradle.StoryLink> decisions;
 
 	private Regex rxChoicePuller;
 	private Regex rxLinkTextPuller;
+
 
 
 		
@@ -38,6 +41,7 @@ public class gameManager : MonoBehaviour {
 
 		importedStory.Begin ();
 		readyCurrentPassage ();
+		// Gets the Image attached to canvas and sets to textBackground
 	}
 
 	void displayCurrentPassage () {
@@ -58,10 +62,20 @@ public class gameManager : MonoBehaviour {
 	// Gets the current passage all set up (displays on screen and listens for events)
 	void readyCurrentPassage() {
 		displayCurrentPassage ();
+
+		// Hide old Quads
+		foreach(string decisionPoint in decisions.Keys) {
+			GameObject collider = GameObject.Find (decisionPoint);
+			if (collider != null) {
+				Destroy(collider.transform.GetChild (0).gameObject);
+			}
+		}
 		decisions.Clear ();
 		foreach (Cradle.StoryLink link in importedStory.GetCurrentLinks()) {
 			string choice = pullChoiceFromLink(link);
 			decisions.Add (choice, link);
+			// show new Quads
+			addQuad(choice);
 		}
 	}
 
@@ -74,6 +88,28 @@ public class gameManager : MonoBehaviour {
 		foreach (Cradle.StoryLink link in importedStory.GetCurrentLinks()) {
 			print (pullLinkText(link));
 			print (pullChoiceFromLink (link));
+		}
+	}
+
+	void addQuad(string storyPointName) {
+		GameObject collider = GameObject.Find (storyPointName);
+		if (collider != null) {
+			print (collider);
+
+			// create quad, disable collider, rotate, position, and scale
+			var newQuad = GameObject.CreatePrimitive(PrimitiveType.Quad);
+			newQuad.GetComponent<MeshCollider>().enabled = false;
+			newQuad.transform.Rotate (new Vector3 (90, 0, 0));
+			newQuad.transform.localScale = new Vector3 (2, 2, 1);
+			newQuad.transform.position = new Vector3(collider.transform.position.x, 100, collider.transform.position.z);
+
+			// Set to layer 8, the layer for the minimap
+			newQuad.layer = 8;
+
+			// set parent as the collider
+			newQuad.transform.parent = collider.transform;
+
+			//newQuad.GetComponent<Renderer>().material.SetTexture("     //SetTexture(choicePointTexture);
 		}
 	}
 
@@ -117,7 +153,13 @@ public class gameManager : MonoBehaviour {
 			{
 				print ("Key not in decision dictionary");
 			}
+		} else if (Input.GetKeyDown (KeyCode.F)) {
+			print ("In game manager f pressed");
+			textBackground.enabled = !textBackground.enabled;
+			gameText.enabled = !gameText.enabled;
+
 		}
+
 	}
 
 	public void recieveCollisions(string name) {
