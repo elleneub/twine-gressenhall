@@ -103,13 +103,18 @@ public class gameManager : MonoBehaviour {
 			newQuad.transform.localScale = new Vector3 (2, 2, 1);
 			newQuad.transform.position = new Vector3(collider.transform.position.x, 100, collider.transform.position.z);
 
+			// add color to quad
+			//Renderer rend = newQuad.GetComponent<Renderer>();
+			//rend.material.shader = Shader.Find("Specular");
+			//rend.material.SetColor("_SpecColor", Color.red);
+
 			// Set to layer 8, the layer for the minimap
 			newQuad.layer = 8;
 
 			// set parent as the collider
 			newQuad.transform.parent = collider.transform;
 
-			//newQuad.GetComponent<Renderer>().material.SetTexture("     //SetTexture(choicePointTexture);
+			newQuad.GetComponent<Renderer> ().material.SetTexture ("_MainTex", choicePointTexture);
 		}
 	}
 
